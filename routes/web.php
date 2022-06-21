@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VeterinarioController;
+use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\PropietarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/api/veterinario/registrar',[VeterinarioController::class, 'store']);
+
+//// Rutas tabla servicios 
+Route::post('/api/servicio/registrar',[ServicioController::class, 'store']);
+
+/// Rutas tabla Propietarios
+Route::post('/api/propietario/registrar',[PropietarioController::class, 'store']);

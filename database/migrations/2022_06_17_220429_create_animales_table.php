@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('color',20);
             $table->date('fecNac');
             $table->string('descripcion');
+            $table->char('edo',1);
             $table->timestamps();
         });
     }

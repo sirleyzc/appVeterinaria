@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('codigo',50);
             $table->date('fecha');
             $table->float('total');
+            $table->char('edo',1);
             $table->timestamps();
         });
     }

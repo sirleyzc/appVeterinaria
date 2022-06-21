@@ -18,12 +18,14 @@ return new class extends Migration
 
             $table->foreignId('idAnimales')->constrained('animales');
             $table->foreignId('idVeterinarios')->constrained('veterinarios');
+            $table->foreignId('idUser')->constrained('users');
 
             $table->string('codigo',45);
             $table->date('fecha');
             $table->string('diagnostico');
             $table->string('tratamiento');
             $table->string('medicamento');
+            $table->char('edo',1);
             $table->timestamps();
         });
     }
