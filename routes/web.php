@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VeterinarioController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\PropietarioController;
+use App\Http\Controllers\AnimaleController;
+use App\Http\Controllers\HistoriasClinicaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +39,9 @@ Route::post('/api/propietario/registrar',[PropietarioController::class, 'store']
 Route::get('/api/propietario/listar', [PropietarioController::class, 'index']);
 Route::post('/api/propietario/actualizar', [PropietarioController::class, 'update']);
 Route::post('/api/propietario/eliminar', [PropietarioController::class, 'destroy']);
+
+///Rutas tabla animales
+Route::post('/api/animal/registrar', [AnimaleController::class, 'store']);
+
+//Rutas tabla historia clinica
+Route::post('/api/historia/registrar', [HistoriasClinicaController::class, 'store']);
